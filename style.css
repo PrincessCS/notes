@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #4CAF50; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+}
+
+
+#add-note {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#add-note:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+#add-note:focus {
+    outline: none; 
+}
+
+
+#note-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.note-div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+
+.save-btn, .cancel-btn{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+    background-color: #45a049;
+}
+
+.edit-btn{
+    background-color: #f39c12;
+    color: white;
+}
+
+.edit-btn:hover{
+    background-color: #e67e22;
+    color: white;
+}
+
+.delete-btn, .delete-note-btn, .close-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover, .delete-note-btn:hover, .close-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+dialog {
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .cancel-btn, .delete-note-btn, .close-btn {
+    margin: 15px 5px;
+    padding: 8px 16px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .dialog-message {
+    font-size: 0.8rem;
+    color: #333;
+  }
